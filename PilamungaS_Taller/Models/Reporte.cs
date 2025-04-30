@@ -4,7 +4,7 @@
     {
         public List<Jugador> Goleadores {  get; set; }
         public List<Jugador> Asistentes { get; set; }
-        public List<Jugador> EquipoMayorPresupuesto { get; set; }
+        public List<EquipoMayorPresupuesto> EquipoMayorPresupuesto { get; set; }
 
     }
     public class EquipoMayorPresupuesto
