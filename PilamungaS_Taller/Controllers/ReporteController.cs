@@ -6,12 +6,10 @@ namespace PilamungaS_Taller.Controllers
 {
     public class ReporteController : Controller
     {
-        private readonly EquipoRepository _repo;
         private readonly ReporteRepository _reporteRepo;
 
-        public ReporteController(ReporteRepository reporteRepo, EquipoRepository repo)
+        public ReporteController(ReporteRepository reporteRepo)
         {
-            _repo = repo;
             _reporteRepo = reporteRepo;
         }
 

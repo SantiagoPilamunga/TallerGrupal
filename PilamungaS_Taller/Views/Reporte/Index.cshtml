@@ -1,9 +1,14 @@
-﻿<h2>Top 5 Goleadores</h2>
+﻿@model PilamungaS_Taller.Models.Reporte
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Top 5 Goleadores</h2>
 <table class="table">
     <tr><th>Nombre</th><th>Goles</th></tr>
     @foreach (var jugador in Model.Goleadores)
     {
-        <tr><td>@jugador.Name</td><td>@jugador.Goles</td></tr>
+        <tr><td>@jugador.Nombre</td><td>@jugador.Goles</td></tr>
     }
 </table>
 
@@ -12,7 +17,7 @@
     <tr><th>Nombre</th><th>Asistencias</th></tr>
     @foreach (var jugador in Model.Asistentes)
     {
-        <tr><td>@jugador.Name</td><td>@jugador.AsistenciasTotales</td></tr>
+        <tr><td>@jugador.Nombre</td><td>@jugador.AsistenciasTotales</td></tr>
     }
 </table>
 
