@@ -1,0 +1,26 @@
+﻿<h2>Top 5 Goleadores</h2>
+<table class="table">
+    <tr><th>Nombre</th><th>Goles</th></tr>
+    @foreach (var jugador in Model.Goleadores)
+    {
+        <tr><td>@jugador.Name</td><td>@jugador.Goles</td></tr>
+    }
+</table>
+
+<h2>Top 5 Asistentes</h2>
+<table class="table">
+    <tr><th>Nombre</th><th>Asistencias</th></tr>
+    @foreach (var jugador in Model.Asistentes)
+    {
+        <tr><td>@jugador.Name</td><td>@jugador.AsistenciasTotales</td></tr>
+    }
+</table>
+
+<h2>Equipo con Mayor Presupuesto</h2>
+<table class="table">
+    <tr><th>Equipo</th><th>Presupuesto Total</th></tr>
+    @foreach (var equipo in Model.EquipoMayorPresupuesto)
+    {
+        <tr><td>@equipo.NombreEquipo</td><td>@equipo.Presupuesto</td></tr>
+    }
+</table>

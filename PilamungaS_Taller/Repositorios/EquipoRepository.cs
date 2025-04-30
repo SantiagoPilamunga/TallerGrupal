@@ -3,6 +3,7 @@ using PilamungaS_Taller.Models;
 
 namespace PilamungaS_Taller.Repositorios
 {
+
     public class EquipoRepository
     {
         public static IEnumerable<Equipo> Equipos; //agregamos static para que se conserve los datos
@@ -253,5 +254,6 @@ namespace PilamungaS_Taller.Repositorios
             return true;
         }
     }
+
 }
 

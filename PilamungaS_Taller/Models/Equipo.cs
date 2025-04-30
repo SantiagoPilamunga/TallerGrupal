@@ -26,6 +26,7 @@ namespace PilamungaS_Taller.Models
         public string Logo { get; set; }
 
 
+        public ICollection<Jugador> Jugadores { get; set; }
 
     }
 }

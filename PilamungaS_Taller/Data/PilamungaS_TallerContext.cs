@@ -15,5 +15,6 @@ namespace PilamungaS_Taller.Data
         }
 
         public DbSet<PilamungaS_Taller.Models.Equipo> Equipo { get; set; } = default!;
+        public DbSet<PilamungaS_Taller.Models.Jugador> Jugador { get; set; } = default!;
     }
 }
