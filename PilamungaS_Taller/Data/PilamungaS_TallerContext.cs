@@ -15,6 +15,7 @@ namespace PilamungaS_Taller.Data
         {
         }
         public DbSet<Equipo> Equipos { get; set; }
+        public DbSet<Jugador> Jugadores { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

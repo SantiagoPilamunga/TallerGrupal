@@ -39,8 +39,7 @@ namespace PilamungaS_Taller.Controllers
         
         public ActionResult Edit(int Id)
         {
-            
-            Equipo equipo = _equipoRepo.DevuelveEquipoPorId(Id);
+            Equipo equipo = _equipoRepo.DevuelveEquipoConJugadores(Id);
             return View(equipo);
         }
 

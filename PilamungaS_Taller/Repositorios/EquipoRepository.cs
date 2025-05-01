@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Razor.Language.Intermediate;
+using Microsoft.EntityFrameworkCore;
 using PilamungaS_Taller.Data;
 using PilamungaS_Taller.Models;
 
@@ -34,6 +35,13 @@ namespace PilamungaS_Taller.Repositorios
 
             _context.SaveChanges();
             return true;
+        }
+
+        public Equipo? DevuelveEquipoConJugadores(int id)
+        {
+            return _context.Equipos
+                .Include(e => e.Jugadores)
+                .FirstOrDefault(e => e.Id == id);
         }
     }
 

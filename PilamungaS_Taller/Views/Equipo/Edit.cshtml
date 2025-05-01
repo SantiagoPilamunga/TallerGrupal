@@ -53,7 +53,7 @@
 			</div>
 
 			<div class="form-group">
-				<label class="control-label">Logo</label>
+				<label class="control-label"></label>
 				<img src="@Model.Logo" alt="Logo de @Model.Nombre" class="img-fluid" style="max-height: 100px;" />
 			</div>
 		</div>
@@ -61,7 +61,41 @@
 			<p><strong>Puntos:</strong> @Model.Puntos</p>
 		</div>
 	</div>
-	
+	<div class="card">
+		<div class="card-body">
+			<h4>Jugadores del equipo</h4>
+			@if (Model.Jugadores != null && Model.Jugadores.Any())
+			{
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th># Camiseta</th>
+							<th>Goles</th>
+							<th>Asistencias</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var jugador in Model.Jugadores)
+						{
+							<tr>
+								<td>@jugador.Nombre</td>
+								<td>@jugador.NumeroCamiseta</td>
+								<td>@jugador.Goles</td>
+								<td>@jugador.AsistenciasTotales</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			}
+			else
+			{
+				<p><em>Este equipo no tiene ningun jugador de momento</em></p>
+			}
+		</div>
+	</div>
+
 </div>
 
 <div>
