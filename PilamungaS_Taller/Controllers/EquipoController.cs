@@ -9,12 +9,14 @@ namespace PilamungaS_Taller.Controllers
 
     public class EquipoController : Controller
     {
-        
-        public EquipoRepository _repository;
-        public EquipoController()
+
+        private readonly EquipoRepository _equipoRepo;
+
+        public EquipoController(EquipoRepository equipoRepo)
         {
-            _repository = new EquipoRepository();
+            _equipoRepo = equipoRepo;
         }
+        
         public ActionResult View()
         {
             return View();
@@ -23,7 +25,7 @@ namespace PilamungaS_Taller.Controllers
         public ActionResult List()
         {
             
-            var equipos = _repository.DevuelveListadoEquipos2();
+            var equipos = _equipoRepo.DevuelveListadoEquipos2();
             equipos=equipos.OrderByDescending(item => item.Puntos);
             //equipos = equipos.Where(item => item.Nombre == "Liga de quito");
             return View(equipos);
@@ -38,7 +40,7 @@ namespace PilamungaS_Taller.Controllers
         public ActionResult Edit(int Id)
         {
             
-            Equipo equipo = _repository.DevuelveEquipoPorId(Id);
+            Equipo equipo = _equipoRepo.DevuelveEquipoPorId(Id);
             return View(equipo);
         }
 
@@ -46,7 +48,7 @@ namespace PilamungaS_Taller.Controllers
         public ActionResult Edit(int Id,Equipo equipo)
         {
 
-            _repository.ActualizarEquipo(Id, equipo);
+            _equipoRepo.ActualizarEquipo(Id, equipo);
             return RedirectToAction(nameof(List));
 
         }

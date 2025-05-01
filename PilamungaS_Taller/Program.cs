@@ -10,6 +10,7 @@ builder.Services.AddDbContext<PilamungaS_TallerContext>(options =>
   //  options.UseSqlServer(builder.Configuration.GetConnectionString("PilamungaS_TallerContext") ?? throw new InvalidOperationException("Connection string 'PilamungaS_TallerContext' not found.")));
 
 builder.Services.AddScoped<ReporteRepository>();
+builder.Services.AddScoped<EquipoRepository>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
