@@ -92,7 +92,7 @@ namespace PilamungaS_Taller.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,NumeroCamiseta,Goles,AsistenciasTotales,Sueldo,EquipoId")] Jugador jugador)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,NumeroCamiseta,Goles,AsistenciasTotales,Sueldo,EquipoId")] Jugador jugador)
         {
             if (id != jugador.Id)
             {
