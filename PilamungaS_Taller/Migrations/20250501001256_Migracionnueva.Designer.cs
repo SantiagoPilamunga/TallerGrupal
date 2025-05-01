@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PilamungaS_Taller.Data;
 
@@ -10,9 +11,11 @@ using PilamungaS_Taller.Data;
 namespace PilamungaS_Taller.Migrations
 {
     [DbContext(typeof(PilamungaS_TallerContext))]
-    partial class PilamungaS_TallerContextModelSnapshot : ModelSnapshot
+    [Migration("20250501001256_Migracionnueva")]
+    partial class Migracionnueva
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
